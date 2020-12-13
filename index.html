@@ -3,85 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
+  <title>Frontend Mentor | Social Media Dashboard</title>
 
   
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  <script src="javascript.js"
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="header">
+        <h1>Social Media Dashboard</h1>
+        <p>Followers: 23,004</p>
+      </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="mode-switcher">
+          <p>Dark Mode</p>
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+  </div> 
+</div>
+<div class="container card-wrapper">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-3 ">
+      <div class="card-inner">
+        <div class="social-name">
+          <div class="facebook"></div>
+          <div class="user-name">@nathanf</div>
+        </div>
+        <div class="followers-number">1987</div>
+        <div class="followers">Followers</div>
+        <div class="update">
+          <div class="arrow"></div>
+          <div class="today-update">4 Today</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner">
+        <div class="social-name">
+          <div class="twitter"></div>
+          <div class="user-name">@nathanf</div>
+        </div>
+        <div class="followers-number">1044</div>
+        <div class="followers">Followers</div>
+        <div class="update">
+          <div class="arrow"></div>
+          <div class="today-update">99 Today</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner insta">
+        <div class="social-name">
+          <div class="instagram"></div>
+          <div class="user-name">@realnathanf</div>
+        </div>
+        <div class="followers-number">11k</div>
+        <div class="followers">Followers</div>
+        <div class="update">
+          <div class="arrow"></div>
+          <div class="today-update">1099 Today</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner youtube-border">
+        <div class="social-name">
+          <div class="youtube"></div>
+          <div class="user-name">diNathan F.v</div> 
+        </div>
+        <div class="followers-number">8239</div>
+        <div class="followers">Subscribers</div>
+        <div class="update">
+          <div class="arrow-youtube"></div>
+          <div class="today-update-youtube">144 Today</div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <div class="header">
+          <h1> Overview - Today</h1>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container card-wrapper">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 card">
+      <div class="page-views"> Page Views</div>
+      <div class="facebook"></div>
+      <div class="page-number">87</div>
+      <div class="today-update">+3%</div>
+    </div>
+    <div class="col-xs-12 col-sm-4 card">
+      <div class="likes"> Likes</div>
+      <div class="facebook"></div>
+      <div class="likes-number">52</div>
+      <div class="today-update">+3%</div>
+    </div>
+    <div class="col-sm-12 card">
+      <div class="likes">Profile Views</div>
+      <div class="instagram"></div>
+      <div class="likes-number">5462</div>
+      <div class="today-update">2257%</div>
+    </div>
+    <div class="col-sm-12 card">
+      <div class="likes">Likes</div>
+      <div class="instagram"></div>
+      <div class="likes-number">52k</div>
+      <div class="today-update">1375%</div>
+    </div>
+    <div class="col-sm-12 card">
+      <div class="tweets">Retweets</div>
+      <div class="twitter"></div>
+      <div class="tweets-number">117</div>
+      <div class="today-update">303%</div>
+    </div>
+    <div class="col-sm-12 card">
+      <div class="tweets">Likes</div>
+      <div class="twitter"></div>
+      <div class="tweets-number">507</div>
+      <div class="today-update">553%</div>
+    </div>
+    <div class="col-sm-12 card">
+      <div class="likes"> Likes</div>
+      <div class="??"></div>
+      <div class="likes-number">107</div>
+      <div class="today-update">19%</div>
+    </div>
+    <div class="col-sm-12 card">
+      <div class="total-views"> Total Views</div>
+      <div class="youtube"></div>
+      <div class="likes-number">1407</div>
+      <div class="today-update">12%</div>
+    </div>
+  </div>
+</div>
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+  Coded by <a href="#">Alexey Kuzmis</a>.
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="javascript.js"></script>
 </body>
 </html>
