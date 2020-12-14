@@ -13,78 +13,80 @@
 <body>
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 col-md-6">
       <div class="header">
-        <h1>Social Media Dashboard</h1>
-        <p>Followers: 23,004</p>
+        <h1 class="title light">Social Media Dashboard</h1>
+        <p class="total-followers">Followers: 23,004</p>
+        <hr class="solid">
       </div>
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-12 col-md-6">
         <div class="mode-switcher">
-          <p>Dark Mode</p>
+          <p class="light">Light Mode</p>
+          <p class="dark">Dark Mode</p>
           <!-- Rounded switch -->
-          <label class="switch">
+          <label class="switch" id="switch">
             <input type="checkbox">
             <span class="slider round"></span>
           </label>
         </div>
-      </div>
+    </div>
   </div> 
 </div>
 <div class="container card-wrapper">
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-md-3 ">
-      <div class="card-inner">
+      <div class="card-inner light facebook-border">
         <div class="social-name">
           <div class="facebook"></div>
           <div class="user-name">@nathanf</div>
         </div>
-        <div class="followers-number">1987</div>
+        <div class="followers-number light">1987</div>
         <div class="followers">Followers</div>
         <div class="update">
-          <div class="arrow"></div>
+          <div class="arrow-up"></div>
           <div class="today-update">4 Today</div>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 col-md-3">
-      <div class="card-inner">
+      <div class="card-inner light facebook-border">
         <div class="social-name">
           <div class="twitter"></div>
           <div class="user-name">@nathanf</div>
         </div>
-        <div class="followers-number">1044</div>
+        <div class="followers-number light">1044</div>
         <div class="followers">Followers</div>
         <div class="update">
-          <div class="arrow"></div>
+          <div class="arrow-up"></div>
           <div class="today-update">99 Today</div>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 col-md-3">
-      <div class="card-inner insta">
+      <div class="card-inner light instagram-border">
         <div class="social-name">
           <div class="instagram"></div>
           <div class="user-name">@realnathanf</div>
         </div>
-        <div class="followers-number">11k</div>
+        <div class="followers-number light">11k</div>
         <div class="followers">Followers</div>
         <div class="update">
-          <div class="arrow"></div>
+          <div class="arrow-up"></div>
           <div class="today-update">1099 Today</div>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 col-md-3">
-      <div class="card-inner youtube-border">
+      <div class="card-inner light youtube-border">
         <div class="social-name">
           <div class="youtube"></div>
           <div class="user-name">diNathan F.v</div> 
         </div>
-        <div class="followers-number">8239</div>
-        <div class="followers">Subscribers</div>
+        <div class="followers-number light">8239</div>
+        <div class="followers light">Subscribers</div>
         <div class="update">
-          <div class="arrow-youtube"></div>
+          <div class="arrow-down"></div>
           <div class="today-update-youtube">144 Today</div>
         </div>
       </div>
@@ -95,60 +97,132 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4">
         <div class="header">
-          <h1> Overview - Today</h1>
+          <h1 class="title light mb-4"> Overview - Today</h1>
         </div>
     </div>
   </div>
 </div>
 <div class="container card-wrapper">
   <div class="row">
-    <div class="col-xs-12 col-sm-4 card">
-      <div class="page-views"> Page Views</div>
-      <div class="facebook"></div>
-      <div class="page-number">87</div>
-      <div class="today-update">+3%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light">Page Views</div>
+          <div class="page-update light">87</div>
+        </div>
+        <div class="bottom-row">
+          <div class="facebook-1"></div>
+          <div class="update-1">
+            <div class="arrow-up"></div>
+            <div class="today-update light">3%</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-xs-12 col-sm-4 card">
-      <div class="likes"> Likes</div>
-      <div class="facebook"></div>
-      <div class="likes-number">52</div>
-      <div class="today-update">+3%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light">Likes</div>
+          <div class="page-update light">52</div>
+        </div>
+        <div class="bottom-row">
+            <div class="facebook-1"></div>
+            <div class="update-1">
+              <div class="arrow-down"></div>
+              <div class="today-update-youtube light">2%</div>
+            </div>
+          </div>
+      </div>
     </div>
-    <div class="col-sm-12 card">
-      <div class="likes">Profile Views</div>
-      <div class="instagram"></div>
-      <div class="likes-number">5462</div>
-      <div class="today-update">2257%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light">Likes</div>
+          <div class="page-update light">5462</div>
+        </div>
+        <div class="bottom-row">
+          <div class="instagram-1"></div>
+          <div class="update-1">
+            <div class="arrow-up"></div>
+            <div class="today-update light">2257%</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12 card">
-      <div class="likes">Likes</div>
-      <div class="instagram"></div>
-      <div class="likes-number">52k</div>
-      <div class="today-update">1375%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light"> Profile Views</div>
+          <div class="page-update light">52k</div>
+        </div>
+        <div class="bottom-row">
+          <div class="instagram-1"></div>
+          <div class="update-1">
+            <div class="arrow-up"></div>
+            <div class="today-update light">1375%</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12 card">
-      <div class="tweets">Retweets</div>
-      <div class="twitter"></div>
-      <div class="tweets-number">117</div>
-      <div class="today-update">303%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light">Retweets</div>
+          <div class="page-update light">117</div>
+        </div>
+        <div class="bottom-row">
+          <div class="twitter-1"></div>
+          <div class="update-1">
+            <div class="arrow-up"></div>
+            <div class="today-update light">303%</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12 card">
-      <div class="tweets">Likes</div>
-      <div class="twitter"></div>
-      <div class="tweets-number">507</div>
-      <div class="today-update">553%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light">Likes</div>
+          <div class="page-update light">507</div>
+        </div>
+        <div class="bottom-row">
+          <div class="twitter-1"></div>
+          <div class="update-1">
+            <div class="arrow-up"></div>
+            <div class="today-update light">553%</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12 card">
-      <div class="likes"> Likes</div>
-      <div class="??"></div>
-      <div class="likes-number">107</div>
-      <div class="today-update">19%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light">Likes</div>
+          <div class="page-update light">107</div>
+        </div>
+        <div class="bottom-row">
+          <div class="youtube-1"></div>
+          <div class="update-1">
+            <div class="arrow-down"></div>
+            <div class="today-update-youtube light">19%</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12 card">
-      <div class="total-views"> Total Views</div>
-      <div class="youtube"></div>
-      <div class="likes-number">1407</div>
-      <div class="today-update">12%</div>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card-inner-2 light">
+        <div class="upper-row">
+          <div class="page-views light"> Total Views</div>
+          <div class="page-update light">1407</div>
+        </div>
+        <div class="bottom-row">
+          <div class="youtube-1"></div>
+          <div class="update-1">
+            <div class="arrow-down"></div>
+            <div class="today-update-youtube light">12%</div>
+          </div>  
+        </div>
+      </div>
     </div>
   </div>
 </div>

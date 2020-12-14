@@ -5,10 +5,10 @@
 --BrightRed: hsl(356, 69%, 56%);
 --Facebook: hsl(208, 92%, 53%);
 --Twitter: hsl(203, 89%, 53%);
---Instagram: linear gradient hsla(37, 97%, 70%, 0.884) to hsl(329, 70%, 58%);
+--Instagram: linear-gradient( hsla(37, 97%, 70%, 0.884), hsl(329, 70%, 58%));
 --YouTube: hsl(348, 97%, 39%);
     /*Dark Them*/
---ToggleLinear: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+--ToggleLinear: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     /*Light Theme*/
 --Toggle: hsl(230, 22%, 74%);
    /*Neutral*/
@@ -53,23 +53,29 @@ body {
 }
 
 .header {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap ;
     margin-top: 30px;
 }
 
-.header h1 {
+.title.light{
+    color: var(--VeryDarkBlueText);
+}
+
+.title {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.header p {
+.total-followers {
     font-size: var(--Fontsize);
     font-weight: 700;
-    color: var(--DesaturatedBlueText)
+    color: var(--DesaturatedBlueText);
 }
+
+
 
 .mode-switcher {
     display: flex;
@@ -80,17 +86,22 @@ body {
 
 }
 
-.mode-switcher p{
+.mode-switcher .light{
     color: var(--DesaturatedBlueText);
     font-size: var(--Fontsize);
     font-weight: 700;
+    margin-top: 30px;
 }
 
+.mode-switcher .dark {
+    display: none;
+}
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-top: 30px;
   }
 
   .switch input {
@@ -145,17 +156,22 @@ body {
   .slider.round:before {
     border-radius: 50%;
   }
-.card-inner {
+  .card-inner.light {
     background-color: var(--VeryPaleBlueTopBGPattern);
+}
+.card-inner {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top:  5px solid var(--Facebook);
     border-radius: 5px;
 }
 
-.insta {
+.facebook-border {
+    border-top:  5px solid var(--Facebook);
+}
+
+.instagram-border {
     border-top:  5px solid var(--Instagram);
     
 }
@@ -171,8 +187,6 @@ body {
     
 }
 
-
-
 .facebook,
 .instagram,
 .twitter, 
@@ -184,20 +198,24 @@ body {
     margin-right: 5px;
     margin: 20px auto;
 }
-.facebook{
+.facebook,
+.facebook-1{
     background-image: url('images/icon-facebook.svg');
     background-repeat: no-repeat;
 }
-.instagram {
+.instagram,
+.instagram-1 {
     background-image: url('images/icon-instagram.svg');
     background-repeat: no-repeat;
 }
 
-.twitter {
+.twitter,
+.twitter-1 {
     background-image: url('images/icon-twitter.svg');
     background-repeat: no-repeat;
 }
-.youtube {
+.youtube,
+.youtube-1 {
     background-image: url('images/icon-youtube.svg');
     background-repeat: no-repeat;
 }
@@ -216,18 +234,22 @@ body {
     margin-left: 10px;
 }
 
-.followers-number{
+.followers-number.light {
     font-weight: 900;
     font-size: 3.5rem;
     color:var(--VeryDarkBlueText);
     margin-top: 10px;
 }
+
+.followers.light {
+    color:var(--DarkGrayishBlueText);
+}
+
 .followers {
     font-size: var(--Fontsize);
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
-    color:var(--DarkGrayishBlueText);
     
 }
 
@@ -243,7 +265,7 @@ body {
     
 }
 
-.arrow {
+.arrow-up {
     background-image: url('images/icon-up.svg');
     background-repeat: no-repeat;
     width: 15px;
@@ -259,7 +281,7 @@ body {
     
 }
 
-.arrow-youtube {
+.arrow-down {
     background-image: url('images/icon-down.svg');
     background-repeat: no-repeat;
     width: 15px;
@@ -268,9 +290,117 @@ body {
     
 }
 
+/*--------------2nd half--------*/
+.card-inner-2.light{
+    background-color: var(--VeryPaleBlueTopBGPattern);
+}
+.card-inner-2 {
+    margin-top: 10px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    
+}
+
+
+.facebook-1,
+.instagram-1,
+.twitter-1, 
+.youtube-1 {
+    width: 20px;
+    height: 20px;
+    color: var(--Facebook);
+    top: 20px;
+    margin-right: 5px;
+    
+}
+
+
+.upper-row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    float: left;
+    width:70%;
+    margin: 20px 0 20px 20px;
+    align-items: flex-start;
+    
+}
+
+.upper-row .page-update,
+.bottom-row.page-update {
+    margin-top: 40px;
+}
+
+
+.bottom-row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 10px;
+    align-items: flex-end;
+    width: 50%;
+    margin: 20px 20px 20px;
+}
+
+.update-1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.page-update.light{
+    color:var(--VeryDarkBlueText);
+}
+
+.page-update {
+    font-weight: 900;
+    font-size: 1.5rem;   
+}
+
+.page-views.light{
+    color: var(--DarkGrayishBlueText);
+}
+
+.page-views {
+    font-size: var(--Fontsize);
+    font-weight: 700;
+}
+
+body.dark{
+    background-color: var(--VeryDarkBlueBG);
+}
+.card-inner.dark,
+.card-inner-2.dark {
+    background-color: var(--DarkDesaturtedBlueCardBG);
+}
+
+.title.dark,
+.followers.dark,
+.page-views.dark,
+.page-update.dark {
+    background-color: var(--WhiteText);
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media(min-width: 700px){
-
+    hr {
+        display: none;
+    }
+    .mode-switcher {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content:flex-end;
+        
+    
+    }
+    .switch {
+        margin-left: 20px;
+    }
+    
 }
