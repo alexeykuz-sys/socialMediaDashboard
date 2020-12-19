@@ -61,7 +61,7 @@ function changeTextColors(selectors, colors) {
   
   function darkCardMode(){
     changeColors(['.card-inner','.card-inner-2'], ['var(--DarkDesaturtedBlueCardBG)'])
-    changeTextColors(['.followers-number', '.title', '.page-update'],['var(--WhiteText)'])
+    changeTextColors(['.followers-number', '.title', '.page-update', '.attribution'],['var(--WhiteText)'])
 }
 
 function lightCardMode(){
