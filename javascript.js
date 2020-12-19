@@ -24,10 +24,8 @@ function changeMode(){
         bodyModeChange()
     }
 
-    console.log(modeDark, modeLight)
 }
 switchButton.addEventListener('change', changeMode, bodyModeChange)
-console.log(modeDark, modeLight)
 
 
 function bodyModeChange (){
@@ -42,25 +40,31 @@ function bodyModeChange (){
     }
 }
 
-function lightCardMode(){
-    let card =  document.getElementsByClassName('card-inner')
-    let card2 =  document.getElementsByClassName('card-inner-2')
-    
-    for (let i=0;i<card.length; i++){
-        card[i].style.backgroundColor = 'var(--VeryPaleBlueTopBGPattern)'
+
+function changeColors(selectors, colors) {
+    selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        for(i=0; i<elements.length;i++){
+      elements[i].style.backgroundColor = colors;
     }
-    for (let i=0;i<card2.length; i++){
-        card2[i].style.backgroundColor = 'var(--VeryPaleBlueTopBGPattern)'
-    }
+    })
 }
 
-function darkCardMode(){
-    let card =  document.getElementsByClassName('card-inner')
-    let card2 =  document.getElementsByClassName('card-inner-2')
-    for (let i=0;i<card.length; i++){
-        card[i].style.backgroundColor = 'var(--DarkDesaturtedBlueCardBG)'
+function changeTextColors(selectors, colors) {
+    selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        for(i=0; i<elements.length;i++){
+      elements[i].style.color = colors;
     }
-    for (let i=0;i<card2.length; i++){
-        card2[i].style.backgroundColor = 'var(--DarkDesaturtedBlueCardBG)'
-    }
+    })
+}
+  
+  function darkCardMode(){
+    changeColors(['.card-inner','.card-inner-2'], ['var(--DarkDesaturtedBlueCardBG)'])
+    changeTextColors(['.followers-number', '.title', '.page-update'],['var(--WhiteText)'])
+}
+
+function lightCardMode(){
+    changeColors(['.card-inner','.card-inner-2'], ['var(--VeryPaleBlueTopBGPattern)'])
+    changeTextColors(['.followers-number', '.title', '.page-update'],['var(--VeryDarkBlueText)'])
 }

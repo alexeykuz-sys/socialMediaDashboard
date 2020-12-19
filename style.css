@@ -73,6 +73,7 @@ body {
     font-size: var(--Fontsize);
     font-weight: 700;
     color: var(--DesaturatedBlueText);
+    letter-spacing: .1rem;
 }
 
 
@@ -371,26 +372,16 @@ body {
     font-size: 1.5rem;   
 }
 
-.page-views.light{
+.page-views{
     color: var(--DarkGrayishBlueText);
-}
-
-.page-views {
     font-size: var(--Fontsize);
     font-weight: 700;
 }
 
-/* .title.dark,
-.followers.dark,
-.page-views.dark,
-.page-update.dark {
-    background-color: var(--WhiteText); */
-/* } */
-
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media(min-width: 575px){
+@media(min-width: 579px){
     hr {
         display: none;
     }
